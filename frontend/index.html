@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunch Order Pool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🍽 Lunch Order Pool</h1>
+
+    <p class="subtitle">
+        Collective Food Ordering for Teams & Groups
+    </p>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter Name"
+    >
+
+    <select id="food">
+        <option value="Burger" data-price="120">
+            Burger - ₹120
+        </option>
+
+        <option value="Pizza" data-price="180">
+            Pizza - ₹180
+        </option>
+
+        <option value="Sandwich" data-price="90">
+            Sandwich - ₹90
+        </option>
+
+        <option value="Coke" data-price="50">
+            Coke - ₹50
+        </option>
+    </select>
+
+    <input
+        type="number"
+        id="qty"
+        placeholder="Quantity"
+        min="1"
+    >
+
+    <button onclick="addOrder()">
+        Add Order
+    </button>
+
+    <h2>📋 Group Orders</h2>
+
+    <ul id="orderList"></ul>
+
+    <div class="summary">
+
+        <h2>📊 Order Summary</h2>
+
+        <p>
+            People Participating:
+            <span id="peopleCount">0</span>
+        </p>
+
+        <p>
+            Total Orders:
+            <span id="orderCount">0</span>
+        </p>
+
+        <p>
+            Total Cost:
+            ₹<span id="total">0</span>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
